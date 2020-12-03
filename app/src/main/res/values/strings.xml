@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Trivia App</string>
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="enter_name">Enter name</string>
+    <string name="next">Next</string>
+    <string name="who_is_the_best_cricketer_in_the_world_n_options">Who is the best cricketer in the world? <br/> Options:</string>
+    <string name="sachin_tendulkar">Sachin Tendulkar</string>
+    <string name="virat_kohli">Virat Kohli</string>
+    <string name="adam_gilchrist">Adam Gilchrist</string>
+    <string name="jacques_kallis">Jacques Kallis</string>
+    <string name="select_any_one">Select any one.</string>
+    <string name="white">White</string>
+    <string name="yellow">Yellow</string>
+    <string name="orange">Orange</string>
+    <string name="green">Green</string>
+    <string name="select_more_than_1">Select more than 1.</string>
+    <string name="here_are_the_selected_answers">Here are the selected answers:</string>
+    <string name="who_is_the_best_cricketer_in_the_world">Who is the best cricketer in the world?</string>
+    <string name="finish">Finish</string>
+    <string name="history">History</string>
+</resources>
