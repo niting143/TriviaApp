@@ -12,12 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TriviaApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.HomeActivity"
+        <activity android:name=".ui.activities.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.TriviaApp"
             android:windowSoftInputMode="adjustResize"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Splash">
             <intent-filter>

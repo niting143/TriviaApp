@@ -5,7 +5,7 @@
     app:startDestination="@id/name_destination">
     <fragment
         android:id="@+id/name_destination"
-        android:name="com.arraigntech.triviaapp.ui.NameFragment"
+        android:name="com.arraigntech.triviaapp.ui.name.NameFragment"
         android:label="name_fragment"
         tools:layout="@layout/name_layout_fragment">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/cricketer_destination"
-        android:name="com.arraigntech.triviaapp.ui.CricketerFragment"
+        android:name="com.arraigntech.triviaapp.ui.cricket.CricketerFragment"
         android:label="Cricketer_fragment"
         tools:layout="@layout/cricketer_layout_fragment">
         <action
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/flag_destination"
-        android:name="com.arraigntech.triviaapp.ui.FlagFragment"
+        android:name="com.arraigntech.triviaapp.ui.flag.FlagFragment"
         android:label="Flag_fragment"
         tools:layout="@layout/flag_fragment" >
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/summary_destination"
-        android:name="com.arraigntech.triviaapp.ui.SummaryFragment"
+        android:name="com.arraigntech.triviaapp.ui.summary.SummaryFragment"
         android:label="Summary_fragment"
         tools:layout="@layout/summary_fragment">
         <action
@@ -86,5 +86,18 @@
         <argument
             android:name="checkfour"
             app:argType="string"/>
+        <action
+            android:id="@+id/action_summary_to_history"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:destination="@id/history_destination"
+            app:popUpTo="@id/summary_destination"/>
     </fragment>
+    <fragment
+        android:id="@+id/history_destination"
+        android:name="com.arraigntech.triviaapp.ui.history.HistoryFragment"
+        android:label="History_fragment"
+        tools:layout="@layout/history_fragment"/>
 </navigation>

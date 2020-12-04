@@ -1,4 +1,4 @@
-package com.arraigntech.triviaapp.ui
+package com.arraigntech.triviaapp.ui.cricket
 
 import android.widget.RadioButton
 import android.widget.RadioGroup

@@ -1,4 +1,4 @@
-package com.arraigntech.triviaapp.ui
+package com.arraigntech.triviaapp.ui.summary
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -14,7 +14,14 @@ class SummaryFactoryModel(
 ) : ViewModelProvider.Factory{
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if(modelClass.isAssignableFrom(SummaryModel::class.java)){
-            return SummaryModel(userName,answer1,checkOne,checkTwo,checkThree,checkFour)as T
+            return SummaryModel(
+                userName,
+                answer1,
+                checkOne,
+                checkTwo,
+                checkThree,
+                checkFour
+            ) as T
         }
 
         throw IllegalStateException("")

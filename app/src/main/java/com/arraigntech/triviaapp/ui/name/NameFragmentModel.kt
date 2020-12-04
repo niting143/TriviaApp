@@ -1,4 +1,4 @@
-package com.arraigntech.triviaapp.ui
+package com.arraigntech.triviaapp.ui.name
 
 import android.text.Editable
 import androidx.lifecycle.LiveData

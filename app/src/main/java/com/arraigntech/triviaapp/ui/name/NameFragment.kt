@@ -1,19 +1,18 @@
-package com.arraigntech.triviaapp.ui
+package com.arraigntech.triviaapp.ui.name
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.arraigntech.triviaapp.R
 import com.arraigntech.triviaapp.databinding.NameLayoutFragmentBinding
+import com.arraigntech.triviaapp.ui.BaseFragment
+import com.arraigntech.triviaapp.ui.NameFragmentDirections
 
 
-class NameFragment : Fragment() {
+class NameFragment : BaseFragment() {
     private lateinit var binding: NameLayoutFragmentBinding
     private lateinit var model: NameFragmentModel
     override fun onCreateView(
@@ -32,7 +31,10 @@ class NameFragment : Fragment() {
             //Log.e("enter", " Something")
         })
         binding.nextBT.setOnClickListener {
-            val action = NameFragmentDirections.actionNameToCricketer(binding.nameET.text.toString())
+            val action =
+                NameFragmentDirections.actionNameToCricketer(
+                    binding.nameET.text.toString()
+                )
             findNavController().navigate(action)
             binding.nameET.text.clear()
         }

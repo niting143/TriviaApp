@@ -1,17 +1,16 @@
-package com.arraigntech.triviaapp.ui
+package com.arraigntech.triviaapp.ui.flag
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
-import com.arraigntech.triviaapp.R
 import com.arraigntech.triviaapp.databinding.FlagFragmentBinding
+import com.arraigntech.triviaapp.ui.*
 
-class FlagFragment : Fragment() {
+class FlagFragment : BaseFragment() {
     private lateinit var binding: FlagFragmentBinding
     private lateinit var factoryModel: FlagFactoryModel
     private lateinit var modelView: FlagModelView
@@ -29,8 +28,12 @@ class FlagFragment : Fragment() {
     ): View? {
         binding = FlagFragmentBinding.inflate(inflater)
         factoryModel = FlagFactoryModel(
-            FlagFragmentArgs.fromBundle(arguments!!).username,
-            FlagFragmentArgs.fromBundle(arguments!!).answerOne
+            FlagFragmentArgs.fromBundle(
+                arguments!!
+            ).username,
+            FlagFragmentArgs.fromBundle(
+                arguments!!
+            ).answerOne
         )
         modelView = ViewModelProvider(this, factoryModel).get(FlagModelView::class.java)
         binding.model = modelView
@@ -54,14 +57,15 @@ class FlagFragment : Fragment() {
             message3 = one
         })
         binding.nextBT.setOnClickListener {
-            val action = FlagFragmentDirections.actionFlagToSummary(
-                names,
-                answer1,
-                message,
-                message1,
-                message2,
-                message3
-            )
+            val action =
+                FlagFragmentDirections.actionFlagToSummary(
+                    names,
+                    answer1,
+                    message,
+                    message1,
+                    message2,
+                    message3
+                )
             NavHostFragment.findNavController(this)
                 .navigate(action)
         }

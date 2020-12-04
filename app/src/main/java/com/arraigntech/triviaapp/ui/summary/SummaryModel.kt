@@ -1,4 +1,4 @@
-package com.arraigntech.triviaapp.ui
+package com.arraigntech.triviaapp.ui.summary
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -12,7 +12,6 @@ class SummaryModel(
     private val checkThree: String,
     private val checkFour: String
 ) : ViewModel() {
-
     private val userNamee = MutableLiveData<String>()
     val _userName: LiveData<String> get() = userNamee
     private val answer = MutableLiveData<String>()
@@ -26,6 +25,10 @@ class SummaryModel(
     private val list3 = MutableLiveData<String>()
     val _list3: LiveData<String> get() = list3
 
+
+
+
+
     private val ans2 = MutableLiveData<String>()
     val _ans2: LiveData<String> get() = ans2
     val sb = StringBuilder()
@@ -38,7 +41,7 @@ class SummaryModel(
         list2.value = checkThree
         list3.value = checkFour
         if (list.value != "")
-            sb.append(list1.value).append(",")
+            sb.append(list.value).append(",")
         if (list1.value != "")
             sb.append(list1.value).append(",")
         if (list2.value != "")

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="lists"
+            type="com.arraigntech.triviaapp.data.Questionaire" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Game 1 : 15th march 2020"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{`Name : ` +lists.name}"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/who_is_the_best_cricketer_in_the_world"
+            android:textColorHint="@color/black" />
+
+        <TextView
+            android:id="@+id/answer1TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{`Answer : `+lists.cricketer}"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="What are the colors in national flag?"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <TextView
+            android:id="@+id/answer2TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="xyz"
+            android:text="@{`Answer : `+lists.flag}"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/black" />
+
+    </LinearLayout>
+</layout>

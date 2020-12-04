@@ -1,4 +1,4 @@
-package com.arraigntech.triviaapp.ui
+package com.arraigntech.triviaapp.ui.flag
 
 import android.util.Log
 import android.widget.CompoundButton

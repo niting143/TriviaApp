@@ -1,10 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'org.jetbrains.dokka'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs.kotlin'
-
 }
 
 android {
@@ -25,6 +25,13 @@ android {
         buildFeatures {
             dataBinding true
         }
+
+
+    }
+
+    dokka {
+        outputFormat = 'html'
+        outputDirectory = "$buildDir/javadoc"
     }
 
 
@@ -54,14 +61,17 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
 
-    //Navigation
+    //Navigation lib
     implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
     implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
 
-    //room
+    //room lib
     implementation 'androidx.room:room-ktx:2.2.5'
     kapt 'androidx.room:room-compiler:2.2.5'
+    implementation 'androidx.room:room-runtime:2.2.5'
     androidTestImplementation 'androidx.room:room-testing:2.2.5'
+    //coroutines lib
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
 
 
 

@@ -1,4 +1,4 @@
-package com.arraigntech.triviaapp.ui
+package com.arraigntech.triviaapp.ui.cricket
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

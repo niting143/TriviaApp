@@ -5,7 +5,7 @@
 
         <variable
             name="model"
-            type="com.arraigntech.triviaapp.ui.NameFragmentModel" />
+            type="com.arraigntech.triviaapp.ui.name.NameFragmentModel" />
         <variable
             name="isEnabledButton"
             type="Boolean" />
